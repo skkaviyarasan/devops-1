@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps Project</title>
+</head>
+<body>
+  <h1>Frontend Running in Docker</h1>
+  <h2 id="msg"></h2>
+
+  <script>
+    fetch("http://localhost:5000/api")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("msg").innerText = data.message;
+      });
+  </script>
+</body>
+</html>
+
